@@ -1,3 +1,4 @@
+require 'pry'
 Given(/^User in on Home page$/) do
   visit 'http://localhost:3000'
 end
@@ -14,6 +15,7 @@ Then(/^User should be able to see My account link on home page$/) do
 end
 
 Then(/^User should not be able to see My account link on home page$/) do
-  page.find(:xpath, '//*[@id="content"]/div[1]')
-  sleep(5)
+
+  if ("true" == find_link('Login').visible?)
+  end
 end
